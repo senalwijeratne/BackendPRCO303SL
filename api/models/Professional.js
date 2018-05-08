@@ -1,7 +1,7 @@
 /**
- * User.js
+ * Professional.js
  *
- * A user who can log in to this application.
+ * A professional who can log in to this application.
  */
 
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
 
     nicPassportNumber: {
       type: 'string',
-      // required: true,  --> Had to turn off for now since the original signup doesn't have nic
+      required: true,
       unique: true,
       description: 'The NIC number or the Passport number of the user',
       example: '960257777v',
@@ -61,6 +61,34 @@ module.exports = {
       type: 'number',
       description: 'User\'s date of birth',
       example: 1525703175,
+    },
+
+    profType:{
+      type:'string',
+      required: true,
+      description:'What type of professional is this person',
+      example:'Doctor',
+    },
+
+    fee: {
+      type: 'number',
+      required: true,
+      description: 'The fee of the request',
+      example: 1000,
+    },
+
+    experience: {
+      type: 'number',
+      required: true,
+      description: 'How many years have this professional been in practice',
+      example: 10,
+    },
+
+    workplace: {
+      type: 'string',
+      required: true,
+      description: 'what is the primary place of work of this professional',
+      example: 'Lanka Hospitals',
     },
 
     isSuperAdmin: {
@@ -177,19 +205,24 @@ email status until they click the link in the confirmation email.`
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
     // n/a
 
-    savedProfs:{
-      collection: 'professional',
-      via: 'savedBy'
+    savedBy:{
+      collection: 'user',
+      via: 'savedProfs',
     },
 
-    ratingsGiven:{
+    qualifications:{
+      collection: 'qualification',
+      via: 'heldBy',
+    },
+
+    ratings:{
       collection: 'rating',
-      via: 'ratedBy'
+      via: 'ratingOf',
     },
 
-    requestsMade: {
+    requestedIn: {
       collection: 'request',
-      via: 'madeBy',
+      via: 'requestedProf',
     },
 
   },
