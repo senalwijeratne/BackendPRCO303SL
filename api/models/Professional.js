@@ -91,6 +91,13 @@ module.exports = {
       example: 'Lanka Hospitals',
     },
 
+    currentRating: {
+      type: 'number',
+      defaultsTo: 0,
+      description: 'This professional\'s current rating.',
+      example: 4.5,
+    },
+
     isSuperAdmin: {
       type: 'boolean',
       description: 'Whether this user is a "super admin" with extra permissions, etc.',
