@@ -21,6 +21,12 @@ module.exports = {
       example: 3,
     },
 
+    isRemoved: {
+      type: 'boolean',
+      defaultsTo: 0,
+      description: 'Specifies is this record was deleted/removed',
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
