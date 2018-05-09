@@ -63,6 +63,12 @@ module.exports = {
       example: 1525703175,
     },
 
+    isRemoved: {
+      type: 'boolean',
+      defaultsTo: false,
+      description: 'Specifies is this record was deleted/removed',
+    },
+
     isSuperAdmin: {
       type: 'boolean',
       description: 'Whether this user is a "super admin" with extra permissions, etc.',
