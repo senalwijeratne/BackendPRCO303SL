@@ -31,6 +31,11 @@ module.exports = {
       description: 'Additional information about the qualification',
     },
 
+    isRemoved: {
+      type: 'boolean',
+      defaultsTo: false,
+      description: 'Specifies is this record was deleted/removed',
+    },
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝

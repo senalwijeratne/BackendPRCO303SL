@@ -42,6 +42,12 @@ module.exports = {
       example: 'status of the request - seen/accepted/etc.',
     },
 
+    isRemoved: {
+      type: 'boolean',
+      defaultsTo: false,
+      description: 'Specifies is this record was deleted/removed',
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
