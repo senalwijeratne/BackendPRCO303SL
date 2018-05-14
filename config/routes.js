@@ -55,6 +55,7 @@ module.exports.routes = {
   'POST /api/professionals/get-featured':    { action: 'professionals/get-featured' },
   'GET /api/professionals/get-prof-details':    { action: 'professionals/get-prof-details' },
   'POST /api/professionals/search':    { action: 'professionals/search' },
+  'GET /api/professionals/remove-prof/:id':      { action: 'professionals/remove-professional' },
 
   //API endpoins for Qualification model
 
