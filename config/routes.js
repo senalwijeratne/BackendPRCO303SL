@@ -51,6 +51,7 @@ module.exports.routes = {
   'POST  /api/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
 
   //API endpoins for Professional model
+  'GET /api/professionals/get-all':      { action: 'professionals/get-all' },
   'POST /api/professionals/get-featured':    { action: 'professionals/get-featured' },
   'GET /api/professionals/get-prof-details':    { action: 'professionals/get-prof-details' },
   'POST /api/professionals/search':    { action: 'professionals/search' },
