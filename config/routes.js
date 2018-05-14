@@ -62,6 +62,7 @@ module.exports.routes = {
   'POST /api/ratings/submit-rating':  { action: 'ratings/submit-rating' },
 
   //API endpoins for Request model
+  'GET /api/requests/get-all':      { action: 'requests/get-all' },
   'POST /api/requests/make-a-request':  { action: 'requests/make-a-request' },
   'PUT /api/requests/update-status':  { action: 'requests/update-status' },
   'GET /api/requests/get-profs-requests':  { action: 'requests/get-profs-requests' },
