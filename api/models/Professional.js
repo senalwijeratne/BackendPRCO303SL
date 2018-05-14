@@ -62,6 +62,13 @@ module.exports = {
       example: 'Doctor',
     },
 
+    specialization :{
+      type:'string',
+      defaultsTo: 'General',
+      description: 'What is the field this prof is specialized in',
+      example: 'Cardiology',
+    },
+
     fee: {
       type: 'number',
       required: true,
