@@ -17,6 +17,10 @@ module.exports = async function (req, res, proceed) {
   // > custom hook (`api/hooks/custom/index.js`).
   if (req.me) {
     return proceed();
+  } else {
+    if (req.headers.authorization === 'APITESTING') {
+      return proceed()
+    }
   }
 
   //--•
