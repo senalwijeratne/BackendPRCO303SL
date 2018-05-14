@@ -5,7 +5,7 @@ module.exports = {
 
 
   description: 'Depending on the inputs this action recives, it will return all details of all professionals in a particular order; all specified by the user.',
-  
+
 
   inputs: {
 
@@ -33,12 +33,12 @@ module.exports = {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in search/get-all.js',
+      description: 'Something went wrong in professionals/get-all.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. Returning all professionals details.',
     },
 
   },
@@ -46,13 +46,15 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
+    let sortString = sortBy + ' ' + sortOrder
+
     let professionals = await Professional.find({
       where:{
         profType: profType,
         isRemoved: 0,
-      }
+      },
+      sort: sortString
     })
-    .sort(sortBy + ' ' + sortOrder)
 
     return exits.success({professionals})
 

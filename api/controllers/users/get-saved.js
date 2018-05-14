@@ -5,18 +5,18 @@ module.exports = {
 
 
   description: 'This action will return the details of all the professionals that were saved by the user',
-  
+
 
   exits: {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in saved/get-saved.js',
+      description: 'Something went wrong in users/get-saved.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. Returning savedProfs records of the requesting user.',
     },
 
   },

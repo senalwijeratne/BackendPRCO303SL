@@ -66,8 +66,8 @@ module.exports = {
     profType:{
       type:'string',
       required: true,
-      description:'What type of professional is this person',
-      example:'Doctor',
+      description: 'What type of professional is this person',
+      example: 'Doctor',
     },
 
     fee: {

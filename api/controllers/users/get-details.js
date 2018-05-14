@@ -5,18 +5,18 @@ module.exports = {
 
 
   description: 'This action will return the details of the requesting user',
-  
+
 
   exits: {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in profile/get-details.js',
+      description: 'Something went wrong in users/get-details.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. Returning all details of the requesting user.',
     },
 
   },
