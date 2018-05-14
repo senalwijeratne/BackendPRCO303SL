@@ -1,4 +1,3 @@
-// TODO: Check if the
 // TODO: Turn this entire action into one trasaction
 module.exports = {
 

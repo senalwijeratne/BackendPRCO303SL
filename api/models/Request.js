@@ -13,15 +13,15 @@ module.exports = {
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
     seenTime: {
-      type: 'number',
+      type: 'string',
       description: 'Time at which the request was seen',
-      example: 1525676086857,
+      example: '1525676086857',
     },
 
     responseTime: {
-      type: 'number',
+      type: 'string',
       description: 'Time at which the professional responded to the request',
-      example: 1525676086857,
+      example: '1525676086857',
     },
 
     notes: {
@@ -38,7 +38,7 @@ module.exports = {
     status: {
       type: 'string',
       defaultsTo: 'pending',
-      isIn: ['pending', 'seen', 'accepted', 'rejected' , 'completed'],
+      isIn: ['pending', 'seen', 'accepted', 'rejected', 'completed'],
       description: 'status of the request - seen/accepted/etc.',
     },
 

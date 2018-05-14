@@ -63,11 +63,15 @@ module.exports.routes = {
 
   //API endpoins for Request model
   'POST /api/requests/make-a-request':  { action: 'requests/make-a-request' },
+  'PUT /api/requests/update-status':  { action: 'requests/update-status' },
+  'GET /api/requests/get-profs-requests':  { action: 'requests/get-profs-requests' },
 
   //API endpoins for User model
+  'GET /api/users/get-all':      { action: 'users/get-all' },
   'GET /api/users/get-details':    { action: 'users/get-details' },
   'GET /api/users/get-history':    { action: 'users/get-history' },
   'GET /api/users/get-saved':      { action: 'users/get-saved' },
+  'GET /api/users/remove-user/:id':      { action: 'users/remove-user' },
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
