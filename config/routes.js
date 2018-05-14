@@ -71,6 +71,7 @@ module.exports.routes = {
   'GET /api/users/get-details':    { action: 'users/get-details' },
   'GET /api/users/get-history':    { action: 'users/get-history' },
   'GET /api/users/get-saved':      { action: 'users/get-saved' },
+  'GET /api/users/remove-user/:id':      { action: 'users/remove-user' },
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
