@@ -1,3 +1,5 @@
+// TODO: Check if the
+// TODO: Turn this entire action into one trasaction
 module.exports = {
 
 
@@ -54,9 +56,10 @@ module.exports = {
     let request = await Request.findOne(inputs.requestID)
 
     //check if the request is 'completed'
-    if(request.status == 'accepted'){
+    if(request.status == 'completed'){
 
       let {madeBy,requestedProf} = request
+
 
       let newRating = await Rating.create(Object.assign({
         rating: inputs.rating,
@@ -71,7 +74,8 @@ module.exports = {
 
       await Professional.update(requestedProf)
       .set({currentRating: newCurrentRating})
-      
+
+      // NOTE: trigger email/app notifications
 
       return exits.success({newRating})
 

@@ -1,3 +1,5 @@
+// TODO: send eamil/app notifications
+// TODO: hold/freeze payment amount
 module.exports = {
 
 
@@ -48,6 +50,8 @@ module.exports = {
 
     let {id} = this.req.me
 
+    // NOTE: check and freeze funds from user's payment account
+
     let newRequest = await Request.create(Object.assign({
       madeBy: id,
       requestedProf: inputs.requestedProf,
@@ -55,6 +59,8 @@ module.exports = {
       fee: inputs.fee,
     }))
     .fetch()
+
+    // NOTE: trigger email/app notofication
 
     return exits.success({newRequest})
 
