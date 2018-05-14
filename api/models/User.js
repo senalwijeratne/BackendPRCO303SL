@@ -63,15 +63,22 @@ module.exports = {
       example: 1525703175,
     },
 
+    isSuperAdmin: {
+      type: 'boolean',
+      defaultsTo: false,
+      description: 'Whether this user is a "super admin" with extra permissions, etc.',
+    },
+
+    isProf: {
+      type: 'boolean',
+      defaultsTo: false,
+      description: 'Whether this user is a "super admin" with extra permissions, etc.',
+    },
+
     isRemoved: {
       type: 'boolean',
       defaultsTo: false,
       description: 'Specifies is this record was deleted/removed',
-    },
-
-    isSuperAdmin: {
-      type: 'boolean',
-      description: 'Whether this user is a "super admin" with extra permissions, etc.',
     },
 
     passwordResetToken: {
@@ -196,6 +203,11 @@ email status until they click the link in the confirmation email.`
     requestsMade: {
       collection: 'request',
       via: 'madeBy',
+    },
+
+    professional: {
+      collection: 'professional',
+      via: 'user'
     },
 
   },
