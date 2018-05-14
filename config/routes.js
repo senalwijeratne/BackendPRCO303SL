@@ -66,6 +66,7 @@ module.exports.routes = {
   'POST /api/requests/make-a-request':  { action: 'requests/make-a-request' },
   'PUT /api/requests/update-status':  { action: 'requests/update-status' },
   'GET /api/requests/get-profs-requests':  { action: 'requests/get-profs-requests' },
+  'GET /api/requests/remove-request/:id':      { action: 'requests/remove-request' },
 
   //API endpoins for User model
   'GET /api/users/get-all':      { action: 'users/get-all' },
