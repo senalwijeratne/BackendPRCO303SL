@@ -98,10 +98,16 @@ module.exports = {
       example: 4.5,
     },
 
+    featured: {
+      type: 'boolean',
+      defaultsTo: false,
+      description: 'Specifies if this professional is featured or not',
+    },
+
     isRemoved: {
       type: 'boolean',
       defaultsTo: false,
-      description: 'Specifies is this record was deleted/removed',
+      description: 'Specifies if this record was deleted/removed',
     },
 
     isSuperAdmin: {

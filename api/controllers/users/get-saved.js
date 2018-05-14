@@ -24,7 +24,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    let user = await User.find(this.req.me)
+    let user = await User.findOne(this.req.me)
     .populate('savedProfs')
 
     let {savedProfs} = user

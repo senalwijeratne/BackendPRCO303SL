@@ -40,15 +40,34 @@ module.exports.routes = {
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
   // Note that, in this app, these API endpoints may be accessed using the `Cloud.*()` methods
   // from the CloudSDK library.
-  '/api/v1/account/logout':                           { action: 'account/logout' },
-  'PUT   /api/v1/account/update-password':            { action: 'account/update-password' },
-  'PUT   /api/v1/account/update-profile':             { action: 'account/update-profile' },
-  'PUT   /api/v1/account/update-billing-card':        { action: 'account/update-billing-card' },
-  'PUT   /api/v1/entrance/login':                        { action: 'entrance/login' },
-  'POST  /api/v1/entrance/signup':                       { action: 'entrance/signup' },
-  'POST  /api/v1/entrance/send-password-recovery-email': { action: 'entrance/send-password-recovery-email' },
-  'POST  /api/v1/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
-  'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
+  '/api/account/logout':                           { action: 'account/logout' },
+  'PUT   /api/account/update-password':            { action: 'account/update-password' },
+  'PUT   /api/account/update-profile':             { action: 'account/update-profile' },
+  'PUT   /api/account/update-billing-card':        { action: 'account/update-billing-card' },
+  'POST   /api/entrance/login':                        { action: 'entrance/login' },
+  'POST  /api/entrance/signup':                       { action: 'entrance/signup' },
+  'POST  /api/entrance/send-password-recovery-email': { action: 'entrance/send-password-recovery-email' },
+  'POST  /api/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
+  'POST  /api/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
+
+  //API endpoins for Professional model
+  'POST /api/professionals/get-featured':    { action: 'professionals/get-featured' },
+  'GET /api/professionals/get-prof-details':    { action: 'professionals/get-prof-details' },
+  'POST /api/professionals/search':    { action: 'professionals/search' },
+
+  //API endpoins for Qualification model
+
+
+  //API endpoins for Rating model
+  'POST /api/ratings/submit-rating':  { action: 'ratings/submit-rating' },
+
+  //API endpoins for Request model
+  'POST /api/requests/make-a-request':  { action: 'requests/make-a-request' },
+
+  //API endpoins for User model
+  'GET /api/users/get-details':    { action: 'users/get-details' },
+  'GET /api/users/get-history':    { action: 'users/get-history' },
+  'GET /api/users/get-saved':      { action: 'users/get-saved' },
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
@@ -60,6 +79,6 @@ module.exports.routes = {
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗
   //  ╩ ╩╩╚═╝╚═╝  ╩╚═╚═╝═╩╝╩╩╚═╚═╝╚═╝ ╩ ╚═╝
   '/terms':                   '/legal/terms',
-  '/logout':                  '/api/v1/account/logout',
+  '/logout':                  '/api/account/logout',
 
 };

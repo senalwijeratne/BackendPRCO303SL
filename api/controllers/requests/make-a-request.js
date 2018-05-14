@@ -54,6 +54,7 @@ module.exports = {
       notes: inputs.notes,
       fee: inputs.fee,
     }))
+    .fetch()
 
     return exits.success({newRequest})
 

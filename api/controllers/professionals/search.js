@@ -29,7 +29,7 @@ module.exports = {
     sortOrder: {
       type: 'string',
       required: true,
-      example: 'ASC'
+      isIn: ['ASC', 'DESC'],
     },
 
   },
@@ -51,14 +51,12 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    let sortString = sortBy + ' ' + sortOrder
+    let sortString = inputs.sortBy + ' ' + inputs.sortOrder
 
     let professionals = await Professional.find({
-      fullName: {
-        'contains' : name
-      },
       where:{
-        profType: profType,
+        fullName: { 'contains' : inputs.name },
+        profType: inputs.profType,
         isRemoved: 0,
       },
       sort: sortString

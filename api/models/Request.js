@@ -38,7 +38,7 @@ module.exports = {
     status: {
       type: 'string',
       defaultsTo: 'pending',
-      isIn: ['pending', 'seen', 'accepted'],
+      isIn: ['pending', 'seen', 'accepted', 'rejected'],
       description: 'status of the request - seen/accepted/etc.',
     },
 
