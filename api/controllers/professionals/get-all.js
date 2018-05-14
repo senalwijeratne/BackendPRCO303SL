@@ -33,12 +33,12 @@ module.exports = {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in search/get-all.js',
+      description: 'Something went wrong in professionals/get-all.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. Returning all professionals details.',
     },
 
   },

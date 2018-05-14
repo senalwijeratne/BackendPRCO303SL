@@ -5,18 +5,18 @@ module.exports = {
 
 
   description: 'This action will return the details of all the past requests that were made by the user',
-  
+
 
   exits: {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in history/get-history.js',
+      description: 'Something went wrong in users/get-history.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. Returning the history records of the requesting user.',
     },
 
   },

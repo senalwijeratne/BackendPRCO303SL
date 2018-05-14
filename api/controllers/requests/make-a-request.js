@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'submit a new request',
+  friendlyName: 'Submit a new request',
 
 
   description: 'This action will make a new request',
@@ -11,7 +11,8 @@ module.exports = {
 
     notes: {
       type: 'string',
-      example: 'Blah Blah Blahh... Additional information that the user gave when making the request',
+      example: 'Blah Blah Blahh...',
+      description: 'Additional information that the user gave when making the request',
     },
 
     fee: {
@@ -32,12 +33,12 @@ module.exports = {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in history/make-a-request.js',
+      description: 'Something went wrong in requests/make-a-request.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. A new request was created.',
     },
 
   },
@@ -47,14 +48,14 @@ module.exports = {
 
     let {id} = this.req.me
 
-    let newRating = await Request.create(Object.assign({
+    let newRequest = await Request.create(Object.assign({
       madeBy: id,
       requestedProf: inputs.requestedProf,
       notes: inputs.notes,
       fee: inputs.fee,
     }))
 
-    return exits.success()
+    return exits.success({newRequest})
 
   }
 

@@ -38,12 +38,12 @@ module.exports = {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in search/search-by-name.js',
+      description: 'Something went wrong in professionals/search-by-name.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. Returning all professionals details with the searched name',
     },
 
   },

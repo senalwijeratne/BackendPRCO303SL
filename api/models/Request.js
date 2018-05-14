@@ -15,13 +15,13 @@ module.exports = {
     seenTime: {
       type: 'number',
       description: 'Time at which the request was seen',
-      example: '1525676086857'
+      example: 1525676086857,
     },
 
     responseTime: {
       type: 'number',
       description: 'Time at which the professional responded to the request',
-      example: '1525676086857'
+      example: 1525676086857,
     },
 
     notes: {
@@ -32,14 +32,14 @@ module.exports = {
     fee: {
       type: 'number',
       required: true,
-      example: 'The fee of the request'
+      description: 'The fee of the request'
     },
 
     status: {
       type: 'string',
       defaultsTo: 'pending',
       isIn: ['pending', 'seen', 'accepted'],
-      example: 'status of the request - seen/accepted/etc.',
+      description: 'status of the request - seen/accepted/etc.',
     },
 
     isRemoved: {

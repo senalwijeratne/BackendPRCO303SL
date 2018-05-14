@@ -38,12 +38,12 @@ module.exports = {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in history/submit-rating.js',
+      description: 'Something went wrong in ratings/submit-rating.js',
     },
 
     success: {
       statusCode: 200,
-      description: 'An API call was made.',
+      description: 'An API call was made. New rating record submited.',
     },
 
   },
@@ -58,7 +58,7 @@ module.exports = {
       request: inputs.requestID,
     }))
 
-    return exits.success()
+    return exits.success({newRating})
 
   }
 
