@@ -40,42 +40,42 @@ module.exports.routes = {
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
   // Note that, in this app, these API endpoints may be accessed using the `Cloud.*()` methods
   // from the CloudSDK library.
-  '/api/account/logout':                           { action: 'account/logout' },
-  'PUT   /api/account/update-password':            { action: 'account/update-password' },
-  'PUT   /api/account/update-profile':             { action: 'account/update-profile' },
-  'PUT   /api/account/update-billing-card':        { action: 'account/update-billing-card' },
-  'POST   /api/entrance/login':                        { action: 'entrance/login' },
-  'POST  /api/entrance/signup':                       { action: 'entrance/signup' },
-  'POST  /api/entrance/send-password-recovery-email': { action: 'entrance/send-password-recovery-email' },
-  'POST  /api/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
-  'POST  /api/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
+  '/api/account/logout':                             { action: 'account/logout' },
+  'PUT  /api/account/update-password':               { action: 'account/update-password' },
+  'PUT  /api/account/update-profile':                { action: 'account/update-profile' },
+  'PUT  /api/account/update-billing-card':           { action: 'account/update-billing-card' },
+  'POST /api/entrance/login':                        { action: 'entrance/login' },
+  'POST /api/entrance/signup':                       { action: 'entrance/signup' },
+  'POST /api/entrance/send-password-recovery-email': { action: 'entrance/send-password-recovery-email' },
+  'POST /api/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
+  'POST /api/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
 
   //API endpoins for Professional model
-  'GET /api/professionals/get-all':      { action: 'professionals/get-all' },
-  'POST /api/professionals/get-featured':    { action: 'professionals/get-featured' },
-  'GET /api/professionals/get-prof-details':    { action: 'professionals/get-prof-details' },
-  'POST /api/professionals/search':    { action: 'professionals/search' },
-  'GET /api/professionals/remove-prof/:id':      { action: 'professionals/remove-professional' },
+  'GET  /api/professionals/get-all':              { action: 'professionals/get-all' },
+  'POST /api/professionals/get-featured':         { action: 'professionals/get-featured' },
+  'GET  /api/professionals/get-prof-details':     { action: 'professionals/get-prof-details' },
+  'POST /api/professionals/search':               { action: 'professionals/search' },
+  'GET  /api/professionals/remove-prof/:id':      { action: 'professionals/remove-professional' },
 
   //API endpoins for Qualification model
 
 
   //API endpoins for Rating model
-  'POST /api/ratings/submit-rating':  { action: 'ratings/submit-rating' },
+  'POST /api/ratings/submit-rating':              { action: 'ratings/submit-rating' },
 
   //API endpoins for Request model
-  'GET /api/requests/get-all':      { action: 'requests/get-all' },
-  'POST /api/requests/make-a-request':  { action: 'requests/make-a-request' },
-  'PUT /api/requests/update-status':  { action: 'requests/update-status' },
-  'GET /api/requests/get-profs-requests':  { action: 'requests/get-profs-requests' },
-  'GET /api/requests/remove-request/:id':      { action: 'requests/remove-request' },
+  'GET  /api/requests/get-all':                   { action: 'requests/get-all' },
+  'POST /api/requests/make-a-request':            { action: 'requests/make-a-request' },
+  'PUT  /api/requests/update-status':             { action: 'requests/update-status' },
+  'GET  /api/requests/get-profs-requests':        { action: 'requests/get-profs-requests' },
+  'GET  /api/requests/remove-request/:id':        { action: 'requests/remove-request' },
 
   //API endpoins for User model
-  'GET /api/users/get-all':      { action: 'users/get-all' },
-  'GET /api/users/get-details':    { action: 'users/get-details' },
-  'GET /api/users/get-history':    { action: 'users/get-history' },
-  'GET /api/users/get-saved':      { action: 'users/get-saved' },
-  'GET /api/users/remove-user/:id':      { action: 'users/remove-user' },
+  'GET /api/users/get-all':                       { action: 'users/get-all' },
+  'GET /api/users/get-details':                   { action: 'users/get-details' },
+  'GET /api/users/get-history':                   { action: 'users/get-history' },
+  'GET /api/users/get-saved':                     { action: 'users/get-saved' },
+  'GET /api/users/remove-user/:id':               { action: 'users/remove-user' },
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
