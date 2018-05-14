@@ -1,13 +1,18 @@
 module.exports = {
 
 
-  friendlyName: 'get all professionals of a given category',
+  friendlyName: 'get all professionals of a given category with the specified name',
 
 
-  description: 'Depending on the inputs this action recives, it will return all details of all professionals in a particular order; all specified by the user.',
-  
+  description: 'Depending on the inputs this action recives, it will return all details of all professionals with the specified name in a particular order; all specified by the user.',
+
 
   inputs: {
+
+    name: {
+      type: 'string',
+      example: 'Weerasignhe'
+    },
 
     profType: {
       type: 'string',
@@ -33,7 +38,7 @@ module.exports = {
 
     err: {
       statusCode: 500,
-      description: 'Something went wrong in search/get-all.js',
+      description: 'Something went wrong in search/search-by-name.js',
     },
 
     success: {
@@ -46,13 +51,18 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
+    let sortString = sortBy + ' ' + sortOrder
+
     let professionals = await Professional.find({
+      fullName: {
+        'contains' : name
+      },
       where:{
         profType: profType,
         isRemoved: 0,
-      }
+      },
+      sort: sortString
     })
-    .sort(sortBy + ' ' + sortOrder)
 
     return exits.success({professionals})
 
