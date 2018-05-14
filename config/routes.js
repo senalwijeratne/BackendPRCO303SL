@@ -67,6 +67,7 @@ module.exports.routes = {
   'GET /api/requests/get-profs-requests':  { action: 'requests/get-profs-requests' },
 
   //API endpoins for User model
+  'GET /api/users/get-all':      { action: 'users/get-all' },
   'GET /api/users/get-details':    { action: 'users/get-details' },
   'GET /api/users/get-history':    { action: 'users/get-history' },
   'GET /api/users/get-saved':      { action: 'users/get-saved' },
